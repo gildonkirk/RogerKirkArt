@@ -9997,7 +9997,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 0:
 /*!*******************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=C%3A%5CUsers%5Cgildo%5CDocuments%5CCode%5CRogerKirkArt%5Cfront%5Cpages%5Cabout.js ***!
   \*******************************************************************************************************************************************************/
@@ -10020,5 +10020,5 @@ module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=about.js.map

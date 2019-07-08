@@ -1,13 +1,11 @@
 {
   "scripts": {
-    "dev": "next",
+    "dev": "nodemon server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production nodemon server.js"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.2",
     "cacheable-response": "^1.6.11",
-    "express": "^4.17.1",
     "next": "^8.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -15,6 +13,7 @@
   },
   "devDependencies": {
     "eslint": "^6.0.1",
-    "eslint-plugin-react": "^7.14.2"
+    "eslint-plugin-react": "^7.14.2",
+    "babel-plugin-styled-components": "^1.10.2"
   }
 }
