@@ -108,7 +108,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  body {\n    color: red;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  ", "\n\n  body {\n    margin: 0;\n    font-family: 'roboto';\n\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -118,7 +118,14 @@ function _templateObject() {
 }
 
 
-var GlobalStyles = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"])(_templateObject());
+
+function fontFace(name, src) {
+  var fontWeight = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'normal';
+  var fontStyle = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'normal';
+  return "\n    @font-face{\n      font-family: \"".concat(name, "\";\n      src: url('/static/fonts/").concat(src, ".ttf') format(\"truetype\");\n      src: url('/static/fonts/").concat(src, ".ttf') format(\"truetype\"),\n        url('/static/fonts/").concat(src, ".ttf') format(\"truetype\"),\n      font-style: ").concat(fontStyle, ";\n      font-weight: ").concat(fontWeight, ";\n    }\n  ");
+}
+
+var GlobalStyles = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"])(_templateObject(), fontFace('roboto', 'roboto/Roboto-Black'));
 /* harmony default export */ __webpack_exports__["default"] = (GlobalStyles);
 
 /***/ }),
