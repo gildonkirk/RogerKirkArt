@@ -5,9 +5,9 @@ class Index extends Component {
   render() {
     return (
       <div>
-        <div>Hello world</div>
-        <Link href="/about">
-          <button type="button">go to about</button>
+        <div>About</div>
+        <Link href="/">
+          <button type="button">go to home</button>
         </Link>
       </div>
     )

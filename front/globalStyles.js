@@ -23,6 +23,8 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     font-family: ${props => props.theme.fontFamily};
     color: ${props => props.theme.fontColor};
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 `
 
