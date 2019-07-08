@@ -108,7 +108,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  ", "\n\n  body {\n    margin: 0;\n    font-family: 'roboto';\n\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  ", "\n  ", "\n  ", "\n  ", "\n\n  body {\n    margin: 0;\n    font-family: ", ";\n    color: ", ";\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -122,10 +122,14 @@ function _templateObject() {
 function fontFace(name, src) {
   var fontWeight = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'normal';
   var fontStyle = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'normal';
-  return "\n    @font-face{\n      font-family: \"".concat(name, "\";\n      src: url('/static/fonts/").concat(src, ".ttf') format(\"truetype\");\n      src: url('/static/fonts/").concat(src, ".ttf') format(\"truetype\"),\n        url('/static/fonts/").concat(src, ".ttf') format(\"truetype\"),\n      font-style: ").concat(fontStyle, ";\n      font-weight: ").concat(fontWeight, ";\n    }\n  ");
+  return "\n    @font-face{\n      font-family: \"".concat(name, "\";\n      src: url('/static/fonts/").concat(src, ".ttf') format(\"truetype\");\n      src: url('/static/fonts/").concat(src, ".ttf') format(\"truetype\"),\n        url('/static/fonts/").concat(src, ".ttf') format(\"truetype\"),\n      font-weight: ").concat(fontWeight, ";\n      font-style: ").concat(fontStyle, ";\n    }\n  ");
 }
 
-var GlobalStyles = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"])(_templateObject(), fontFace('roboto', 'roboto/Roboto-Black'));
+var GlobalStyles = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"])(_templateObject(), fontFace('roboto', 'roboto/Roboto-Black'), fontFace('roboto', 'roboto/Roboto-Thin'), fontFace('roboto', 'roboto/Roboto-Bold'), fontFace('roboto', 'roboto/Roboto-Light'), function (props) {
+  return props.theme.fontFamily;
+}, function (props) {
+  return props.theme.fontColor;
+});
 /* harmony default export */ __webpack_exports__["default"] = (GlobalStyles);
 
 /***/ }),
@@ -2494,6 +2498,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_12__);
 /* harmony import */ var _globalStyles__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../globalStyles */ "./globalStyles.js");
+/* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../theme */ "./theme.js");
+/* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_theme__WEBPACK_IMPORTED_MODULE_14__);
 
 
 
@@ -2505,6 +2511,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "C:\\Users\\gildo\\Documents\\Code\\RogerKirkArt\\front\\pages\\_document.js";
+
 
 
 
@@ -2539,25 +2546,32 @@ function (_Document) {
                   return originalRenderPage({
                     enhanceApp: function enhanceApp(App) {
                       return function (props) {
-                        return sheet.collectStyles(react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10___default.a.Fragment, {
-                          __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 13
-                          },
-                          __self: this
-                        }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_globalStyles__WEBPACK_IMPORTED_MODULE_13__["default"], {
+                        return sheet.collectStyles(react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(styled_components__WEBPACK_IMPORTED_MODULE_12__["ThemeProvider"], {
+                          theme: _theme__WEBPACK_IMPORTED_MODULE_14___default.a,
                           __source: {
                             fileName: _jsxFileName,
                             lineNumber: 14
                           },
                           __self: this
-                        }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(App, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, props, {
+                        }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10___default.a.Fragment, {
                           __source: {
                             fileName: _jsxFileName,
                             lineNumber: 15
                           },
                           __self: this
-                        }))));
+                        }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_globalStyles__WEBPACK_IMPORTED_MODULE_13__["default"], {
+                          __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 16
+                          },
+                          __self: this
+                        }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(App, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, props, {
+                          __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 17
+                          },
+                          __self: this
+                        })))));
                       };
                     }
                   });
@@ -2592,6 +2606,23 @@ function (_Document) {
 }(next_document__WEBPACK_IMPORTED_MODULE_11___default.a);
 
 /* harmony default export */ __webpack_exports__["default"] = (MyDocument);
+
+/***/ }),
+
+/***/ "./theme.js":
+/*!******************!*\
+  !*** ./theme.js ***!
+  \******************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+  fontFamily: 'roboto',
+  fontColor: 'red'
+};
 
 /***/ }),
 

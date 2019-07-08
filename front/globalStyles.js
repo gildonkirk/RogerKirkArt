@@ -7,19 +7,22 @@ function fontFace(name, src, fontWeight = 'normal', fontStyle = 'normal') {
       src: url('/static/fonts/${src}.ttf') format("truetype");
       src: url('/static/fonts/${src}.ttf') format("truetype"),
         url('/static/fonts/${src}.ttf') format("truetype"),
-      font-style: ${fontStyle};
       font-weight: ${fontWeight};
+      font-style: ${fontStyle};
     }
   `;
 }
 
 const GlobalStyles = createGlobalStyle`
-  ${fontFace('roboto', 'roboto/Roboto-Black', )}
+  ${fontFace('roboto', 'roboto/Roboto-Black')}
+  ${fontFace('roboto', 'roboto/Roboto-Thin')}
+  ${fontFace('roboto', 'roboto/Roboto-Bold')}
+  ${fontFace('roboto', 'roboto/Roboto-Light')}
 
   body {
     margin: 0;
-    font-family: 'roboto';
-
+    font-family: ${props => props.theme.fontFamily};
+    color: ${props => props.theme.fontColor};
   }
 `
 
